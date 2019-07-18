@@ -468,7 +468,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var PriorityService = /** @class */ (function () {
     function PriorityService(https) {
         this.https = https;
-        this.priorityUrl = 'http://dev-paging4:22222/PaxComApi/api/priority';
+        this.priorityUrl = 'https://dev-paging4:22222/PaxComApi/api/priority';
     }
     PriorityService.prototype.getPriorities = function () {
         return this.https
