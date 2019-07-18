@@ -74,7 +74,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".nav-link {\r\n  font-size: large;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7Q0FDbEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXYtbGluayB7XHJcbiAgZm9udC1zaXplOiBsYXJnZTtcclxufVxyXG4iXX0= */"
+module.exports = ".nav-link {\r\n  font-size: large;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7Q0FDbEIiLCJmaWxlIjoiLi4vLi4vc3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXYtbGluayB7XHJcbiAgZm9udC1zaXplOiBsYXJnZTtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -85,7 +85,7 @@ module.exports = ".nav-link {\r\n  font-size: large;\r\n}\r\n\r\n/*# sourceMappi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <nav class='navbar navbar-expand navbar-light bg-light'>\r\n    <a class='navbar-brand'>{{title}}</a>\r\n    <ul class='nav nav-pills'>\r\n      <li><a class='nav-link' [routerLink]=\"['/welcome']\">Home</a></li>\r\n      <li><a class='nav-link' [routerLink]=\"['/products']\">Product List</a></li>\r\n    </ul>\r\n  </nav>\r\n  <div class='container'>\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div>\r\n  <nav class='navbar navbar-expand navbar-light bg-light'>\r\n    <a class='navbar-brand'>{{title}}</a>\r\n    <ul class='nav nav-pills'>\r\n      <li><a class='nav-link' [routerLink]=\"['/welcome']\">Home</a></li>\r\n      <li><a class='nav-link' [routerLink]=\"['/products']\">Product List</a></li>\r\n      <li><a class='nav-link' [routerLink]=\"['/priority']\">Priorities</a></li>\r\n    </ul>\r\n  </nav>\r\n  <div class='container'>\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -109,7 +109,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'Acme Product Managment';
+        this.title = 'Pluralsight Demo Application';
     }
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -141,7 +141,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _home_welcome_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home/welcome.component */ "./src/app/home/welcome.component.ts");
 /* harmony import */ var _products_product_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./products/product.module */ "./src/app/products/product.module.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _priorities_priority_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./priorities/priority.module */ "./src/app/priorities/priority.module.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -155,6 +156,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 //Importing modules with routing
 //The router uses a first-match wins strategy when matching routes, so more specific routes should be placed above less specific routes.
+
 
  //Import last because the any wildcard & blank routing is very generic & covers lots of cases (More specific cases are first and handled before route code drops here)
 var AppModule = /** @class */ (function () {
@@ -170,7 +172,8 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
                 _products_product_module__WEBPACK_IMPORTED_MODULE_5__["ProductModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"]
+                _priorities_priority_module__WEBPACK_IMPORTED_MODULE_6__["PriorityModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
@@ -227,6 +230,279 @@ var WelcomeComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/priorities/priority-routing.module.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/priorities/priority-routing.module.ts ***!
+  \*******************************************************/
+/*! exports provided: PriorityRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PriorityRoutingModule", function() { return PriorityRoutingModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _priority_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./priority.component */ "./src/app/priorities/priority.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var PriorityRoutingModule = /** @class */ (function () {
+    function PriorityRoutingModule() {
+    }
+    PriorityRoutingModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [
+                _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild([
+                    { path: 'priority', component: _priority_component__WEBPACK_IMPORTED_MODULE_2__["PriorityComponent"] },
+                    {
+                        path: 'priority/:id',
+                        //canActivate: [ProductDetailGuard],
+                        component: _priority_component__WEBPACK_IMPORTED_MODULE_2__["PriorityComponent"]
+                    },
+                ])
+            ],
+            exports: [
+                _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]
+            ]
+        })
+    ], PriorityRoutingModule);
+    return PriorityRoutingModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/priorities/priority.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/priorities/priority.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class='card'>\r\n  <div class='card-header'>\r\n    {{pageTitle}}\r\n  </div>\r\n  <div class='card-body'>\r\n    <div style=\"border:solid 1px #337ab7; padding:5px 0px 5px 0px;\">\r\n      <b style=\"padding:0px 5px 0px 5px; color:#337ab7;\">Filter:</b>\r\n      <input type='text' placeholder=\"Priority Name...\" [(ngModel)]='listFilter' />\r\n    </div>\r\n    <div class='table-responsive'>\r\n      <table class='table' *ngIf='priorities && priorities.length'>\r\n        <thead>\r\n          <tr>\r\n            <th>Prority Id</th>\r\n            <th>Name</th>\r\n            <th>Rank</th>\r\n            <th>Expiration Buffer</th>\r\n            <th>Is Live</th>\r\n            <th>Is Emergency</th>\r\n            <th>Is Repeated</th>\r\n            <th>Repeat Buffer</th>\r\n            <th>Level Adjustment</th>\r\n            <th>Is Interruptible</th>\r\n            <th>Percent Available</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor='let p of filteredPriorities'>\r\n            <!--<td>\r\n              <a [routerLink]=\"['/products', product.productId]\">{ {product.productName}}</a>\r\n            </td>-->\r\n            <!--<td>{ {p.productCode | lowercase | convertToSpaces: '-'}}</td>-->\r\n            <td>{{p.id}}</td>\r\n            <td>{{p.name}}</td>\r\n            <td>{{p.rank}}</td>\r\n            <td>{{p.expirationBuffer}}</td>\r\n            <td>{{p.isLiveMicrophone}}</td>\r\n            <td>{{p.isEmergency}}</td>\r\n            <td>{{p.isRepeated}}</td>\r\n            <td>{{p.repeatBuffer}}</td>\r\n            <td>{{p.levelAdjustment}}</td>\r\n            <td>{{p.isInterruptible}}</td>\r\n            <td>{{p.percentAvailable}}</td>\r\n            <!--<td><pm-star [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)'></pm-star></td>-->\r\n          </tr>  \r\n        </tbody>\r\n      </table>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/priorities/priority.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/priorities/priority.component.ts ***!
+  \**************************************************/
+/*! exports provided: PriorityComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PriorityComponent", function() { return PriorityComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _priority_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./priority.service */ "./src/app/priorities/priority.service.ts");
+//import { Component, OnInit } from '@angular/core';
+//import { ActivatedRoute, Router } from '@angular/router';
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+//import { IPriority } from './priority';
+//import { PriorityService } from './priority.service';
+//@Component({
+//  templateUrl: './priority.component.html',
+//  //styleUrls: ['./priority.component.css']
+//})
+//export class PriorityComponent implements OnInit {
+//  pageTitle = 'Priorites';
+//  errorMessage = '';
+//  priority: IPriority | undefined;
+//  constructor(private route: ActivatedRoute,
+//    private router: Router,
+//    private priorityService: PriorityService) {
+//  }
+//  ngOnInit() {
+//    const param = this.route.snapshot.paramMap.get('id');
+//    if (param) {
+//      const id = +param;
+//      this.getPriority(id);
+//    }
+//  }
+//  getPriority(id: number) {
+//    this.priorityService.getPriority(id).subscribe(
+//      priority => this.priority = priority,
+//      error => this.errorMessage = <any>error);
+//  }
+//  onBack(): void {
+//    this.router.navigate(['/products']);
+//  }
+//}
+
+
+var PriorityComponent = /** @class */ (function () {
+    function PriorityComponent(priorityService) {
+        this.priorityService = priorityService;
+        this.pageTitle = 'Priority List';
+        this.priorities = [];
+    }
+    Object.defineProperty(PriorityComponent.prototype, "listFilter", {
+        get: function () {
+            return this._listFilter;
+        },
+        set: function (value) {
+            this._listFilter = value;
+            this.filteredPriorities = this.listFilter ? this.performFilter(this.listFilter) : this.priorities;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    PriorityComponent.prototype.onRatingClicked = function (message) {
+        this.pageTitle = 'Priority List: ' + message;
+    };
+    PriorityComponent.prototype.performFilter = function (filterBy) {
+        filterBy = filterBy.toLocaleLowerCase();
+        return this.priorities.filter(function (priority) {
+            return priority.name.toLocaleLowerCase().indexOf(filterBy) !== -1;
+        });
+    };
+    PriorityComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.priorityService.getPriorities().subscribe(function (priorities) {
+            _this.priorities = priorities;
+            _this.filteredPriorities = _this.priorities;
+        }, function (error) { return _this.errorMessage = error; });
+    };
+    PriorityComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
+            name: 'convertToSpaces'
+        }),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'pm-priority',
+            template: __webpack_require__(/*! ./priority.component.html */ "./src/app/priorities/priority.component.html"),
+        }),
+        __metadata("design:paramtypes", [_priority_service__WEBPACK_IMPORTED_MODULE_1__["PriorityService"]])
+    ], PriorityComponent);
+    return PriorityComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/priorities/priority.module.ts":
+/*!***********************************************!*\
+  !*** ./src/app/priorities/priority.module.ts ***!
+  \***********************************************/
+/*! exports provided: PriorityModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PriorityModule", function() { return PriorityModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _priority_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./priority.component */ "./src/app/priorities/priority.component.ts");
+/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var _priority_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./priority-routing.module */ "./src/app/priorities/priority-routing.module.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var PriorityModule = /** @class */ (function () {
+    function PriorityModule() {
+    }
+    PriorityModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [
+                _shared_shared_module__WEBPACK_IMPORTED_MODULE_2__["SharedModule"],
+                _priority_routing_module__WEBPACK_IMPORTED_MODULE_3__["PriorityRoutingModule"]
+            ],
+            declarations: [
+                _priority_component__WEBPACK_IMPORTED_MODULE_1__["PriorityComponent"],
+            ]
+        })
+    ], PriorityModule);
+    return PriorityModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/priorities/priority.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/priorities/priority.service.ts ***!
+  \************************************************/
+/*! exports provided: PriorityService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PriorityService", function() { return PriorityService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var PriorityService = /** @class */ (function () {
+    function PriorityService(https) {
+        this.https = https;
+        this.priorityUrl = 'http://dev-paging4:22222/PaxComApi/api/priority';
+    }
+    PriorityService.prototype.getPriorities = function () {
+        return this.https
+            .get(this.priorityUrl)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (data) { return console.log('All: ' + JSON.stringify(data)); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.handleError));
+    };
+    PriorityService.prototype.getPriority = function (id) {
+        return this.getPriorities().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (priorities) { return priorities.find(function (p) { return p.id === id; }); }));
+    };
+    //Acutal application would do something on the server
+    PriorityService.prototype.handleError = function (err) {
+        var errorMessage = '';
+        if (err.error instanceof ErrorEvent) {
+            errorMessage = "An error occurred: " + err.error.message;
+        }
+        else {
+            errorMessage = "Server returned code " + err.status + ", error message is: " + err.message;
+        }
+        console.error(errorMessage);
+        return []; //this.NoProducts;//throwError(errorMessage);
+    };
+    PriorityService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], PriorityService);
+    return PriorityService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/products/product-detail.component.css":
 /*!*******************************************************!*\
   !*** ./src/app/products/product-detail.component.css ***!
@@ -234,7 +510,7 @@ var WelcomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2R1Y3RzL3Byb2R1Y3QtZGV0YWlsLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9zcmMvYXBwL3Byb2R1Y3RzL3Byb2R1Y3QtZGV0YWlsLmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
@@ -370,7 +646,7 @@ var ProductDetailGuard = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "thead {\r\n  color: #337AB7;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvZHVjdHMvcHJvZHVjdC1saXN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxlQUFlO0NBQ2hCIiwiZmlsZSI6InNyYy9hcHAvcHJvZHVjdHMvcHJvZHVjdC1saXN0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJ0aGVhZCB7XHJcbiAgY29sb3I6ICMzMzdBQjc7XHJcbn0iXX0= */"
+module.exports = "thead {\r\n  color: #337AB7;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9hcHAvcHJvZHVjdHMvcHJvZHVjdC1saXN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxlQUFlO0NBQ2hCIiwiZmlsZSI6Ii4uLy4uL3NyYy9hcHAvcHJvZHVjdHMvcHJvZHVjdC1saXN0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJ0aGVhZCB7XHJcbiAgY29sb3I6ICMzMzdBQjc7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -726,7 +1002,7 @@ var SharedModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".crop {\r\n  overflow: hidden;\r\n}\r\ndiv {\r\n  cursor: pointer;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL3N0YXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtDQUNsQjtBQUNEO0VBQ0UsZ0JBQWdCO0NBQ2pCIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL3N0YXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jcm9wIHtcclxuICBvdmVyZmxvdzogaGlkZGVuO1xyXG59XHJcbmRpdiB7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG59Il19 */"
+module.exports = ".crop {\r\n  overflow: hidden;\r\n}\r\ndiv {\r\n  cursor: pointer;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9hcHAvc2hhcmVkL3N0YXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtDQUNsQjtBQUNEO0VBQ0UsZ0JBQWdCO0NBQ2pCIiwiZmlsZSI6Ii4uLy4uL3NyYy9hcHAvc2hhcmVkL3N0YXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jcm9wIHtcclxuICBvdmVyZmxvdzogaGlkZGVuO1xyXG59XHJcbmRpdiB7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG59Il19 */"
 
 /***/ }),
 
